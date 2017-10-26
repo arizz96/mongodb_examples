@@ -5,9 +5,11 @@ var Bear = require('./bear')
 const app = express();
 
 var options = {
-  useMongoClient: true
+  useMongoClient: true,
+  user: process.env.MONGODB_USER,
+  password: process.env.MONGODB_PASSWORD,
 };
-mongoose.connect('mongodb://localhost:27017', options).then(
+mongoose.connect(process.env.MONGODB_URL, options).then(
   ()    => { console.log('DB connect') },
   (err) => { console.log('Error connecting to DB ' + err) }
 );
