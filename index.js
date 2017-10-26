@@ -1,6 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
-var Bear = require('./bear')
+var Bear = require('./bear');
 
 const app = express();
 
