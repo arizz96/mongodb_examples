@@ -6,8 +6,6 @@ const app = express();
 
 var options = {
   useMongoClient: true,
-  user: 'test-user',
-  password: 'testtest',
 };
 mongoose.connect(process.env.MONGODB_URL, options).then(
   ()    => { console.log('DB connect') },
